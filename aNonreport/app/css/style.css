@@ -11,7 +11,7 @@ black: #0b0b0b
     font-family: 'Lato', sans-serif;
 }
 h1 {
-    color: #000099;
+    color: #3399cc;
 }
 h2, h3, h4, h5 {
     color: #999999;
@@ -30,7 +30,7 @@ body {
     background-color: #ffffff;
 }
 .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
-    color: #000099;
+    color: #3399cc;
     font-size: 14px;
     font-weight: bold;
 }
