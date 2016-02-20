@@ -47,22 +47,69 @@
     </nav>
 
     <div class="container" id="splash">
-        <div class="contents">
-            <img src="app/img/logo-text.png" alt="aNonreport" class="img-responsive center-block">
+        <div class="contents center">
+            <a href="#info">
+                <img src="app/img/logo-text.png" alt="aNonreport" class="img-responsive center-block">
+            </a>
         </div>
     </div>
 
     <div class="container" id="info">
         <div class="contents">
+            <h1>Info</h1>
+            <h3>How to Safely Send an aNonreport</h3>
+                <p>aNonreport is designed to be highly secure and anonymous once a user has uploaded a file.</p>
+                <p><strong>However, it does not protect you from anyone who might already be watching your internet connection and/or computer.</strong></p>
+                <p>No system is 100% safe (and anyone who declares their system 100% safe is likely lying). The good news is that there are numerous applications today that make it easier to safely submit information. We have put together an easy guide that minimizes the chance that you will be exposed.</p>
+            <h3>First Steps:</h3>
+                <p>Safety begins with a few basic practices, starting with human intelligence [HUMINT] reminders.</p>
+                <p><strong>Do not access aNonreport from work, school, or a government network.</strong> You can easily be tracked and, even if you are using Tor, can draw unwanted attention to yourself.</p>
+                <p><strong>Do not tell anyone about sending information via aNonreport unless you are a part of a monitoring organization and fully understand necessary security protocols.</strong> This means not emailing, calling, discussing on social media, or any other forms of communication. Each channel holds the potential to be observed, which could then compromise your security.</p>
+            <h3>Level 0 Security: Don’t Use Your Home Internet</h3>
+                <p>Go and find a public network that no one can directly link to you. A public library, coffee shop, or other location with open WiFi is ideal. Do not use a credit card and, as <a href="https://theintercept.com/2015/01/28/how-to-leak-to-the-intercept/" target="_blank">The Intercept recommends</a>, leave your phone at home.</p>
         </div>
     </div>
 
-    <div class="container" id="submission-area">
+    <div class="container" id="report">
         <div class="contents">
-            <span type="button" class="btn btn-default btn-file">
-                Upload File <input type="file">
-                <!-- Upload File <input type="file" multiple> -->
-            </span>
+            <h1>Report</h1>
+                <h3>Select your reason for submitting a report.</h3>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="report-type">Murder / Killing</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="report-type">Physical Abuse / Injury</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="report-type">Torture</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="report-type">Slavery / Forced Labor</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="report-type">Sexual Violence / Rape</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="report-type">Restricting Freedom of Expression</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="report-type">Violation of Right to Asylum</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="report-type">Witness to Corruption</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="report-type">Property Right Violation</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="report-type">Wrongful Imprisonment</label>
+                </div>
+
+                <h3>Upload file for report submission.</h3>
+                <span type="button" class="btn btn-default btn-file">
+                    <!-- Only allow single file upload for now -->
+                    Upload File <input type="file">
+                </span>
         </div>
     </div>
 

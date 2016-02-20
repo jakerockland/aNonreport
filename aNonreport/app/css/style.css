@@ -9,6 +9,7 @@ black: #0b0b0b
 /* Basics */
 * {
     font-family: 'Lato', sans-serif;
+    font-size: 105%;
 }
 h1 {
     color: #3399cc;
@@ -22,7 +23,16 @@ body {
 }
 .contents {
   padding: 40px 15px;
-  text-align: center;
+}
+.center {
+    text-align: center;
+}
+a {
+    color: #000099;
+}
+a:focus, a:hover {
+    color: #3399cc;
+    text-decoration: none;
 }
 
 /* Navbar */
@@ -56,10 +66,18 @@ body {
     color: #0b0b0b;
 }
 
+/* Report Type Dropdown */
+
 /* Upload Button */
-.btn-file {
+.btn-file, .dropdown-toggle {
     position: relative;
     overflow: hidden;
+    font-size: 18px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    margin: 8px 8px 16px;
 }
 .btn-file input[type=file] {
     position: absolute;
@@ -75,4 +93,5 @@ body {
     background: white;
     cursor: inherit;
     display: block;
+    padding: 18px 28px;
 }
