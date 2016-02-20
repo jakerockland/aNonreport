@@ -7,6 +7,9 @@ black: #0b0b0b
 */
 
 /* Basics */
+* {
+    font-family: 'Lato', sans-serif;
+}
 h1 {
     color: #000099;
 }
@@ -38,8 +41,8 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 200%;
+    min-height: 200%;
     font-size: 100px;
     text-align: right;
     filter: alpha(opacity=0);
