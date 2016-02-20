@@ -26,8 +26,9 @@ module.exports = (grunt) ->
 
       img:
         src: [
-          "app/img/*"
+            "app/img/**/*.png"
         ]
+        flatten: true
 
       coffee:
         dest: "generated/dapp/compiled-coffee"
@@ -66,10 +67,6 @@ module.exports = (grunt) ->
         files: ["<%= files.html.src %>"]
         tasks: ["copy"]
 
-      img:
-        files: ["<%= files.img.src %>"]
-        tasks: ["copy"]
-
       js:
         files: ["<%= files.js.src %>"]
         tasks: ["concat"]
@@ -77,6 +74,10 @@ module.exports = (grunt) ->
       css:
         files: ["<%= files.css.src %>"]
         tasks: ["concat"]
+
+      img:
+        files: ["<%= files.img.src %>"]
+        tasks: ["copy"]
 
       coffee:
         files: ["coffee/**/*.coffee"]
@@ -97,8 +98,8 @@ module.exports = (grunt) ->
           "dist/dapp/index.html"      : "<%= files.html.src %>"
       img:
         files:
-          "generated/dapp/index.img" : "<%= files.img.src %>"
-          "dist/dapp/index.img"      : "<%= files.img.src %>"
+          "generated/dapp/img/logo.png"      : "<%= files.img.src %>"
+          "dist/dapp/img/logo.png"      : "<%= files.img.src %>"
       css:
         files:
           "dist/dapp/css/app.min.css" : "<%= files.css.src %>"
