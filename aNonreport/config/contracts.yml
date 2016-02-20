@@ -1,2 +1,5 @@
 development:
+  AnonReport:
+      args:
+        - 100
 staging:

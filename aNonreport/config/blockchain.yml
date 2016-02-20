@@ -23,12 +23,12 @@ staging:
   network_id: 0
   max_peers: 4
   console: true
-  bootnodes: 
+  bootnodes:
     boot: false
-    enodes: [] #insert enode urls here. 
+    enodes: [] #insert enode urls here.
   account:
     init: false
-    address:
+    address: 717e39c2a3e81c35f81b7ebbcd5fc1dae9d0de4f
 production:
   rpc_host: localhost
   rpc_port: 8101
@@ -37,7 +37,7 @@ production:
   network_id: 1
   max_peers: 4
   console: true
-  bootnodes: 
+  bootnodes:
     boot: false
     enodes: []
   account:
