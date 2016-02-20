@@ -98,3 +98,15 @@ a:focus, a:hover {
     display: block;
     padding: 18px 28px;
 }
+
+/* Map Selector */
+#locationselector {
+    width: 250px; 
+    height: 200px;
+}
+@media (min-width: 40em) {
+    #locationselector {
+        width: 500px;
+        height: 400px;
+    }
+}

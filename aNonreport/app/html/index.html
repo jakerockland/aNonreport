@@ -73,7 +73,7 @@
     <div class="container" id="report">
         <div class="contents">
             <h1>Report</h1>
-                <h3>Select your reason for submitting a report.</h3>
+                <h3>Select your reason(s) for submitting a report.</h3>
                 <div class="checkbox">
                     <label><input type="checkbox" name="report-type">Murder / Killing</label>
                 </div>
@@ -105,6 +105,9 @@
                     <label><input type="checkbox" name="report-type">Wrongful Imprisonment</label>
                 </div>
 
+                <h3>Location where this report takes place.</h3>
+                <div id="locationselector"></div>
+
                 <h3>Upload file for report submission.</h3>
                 <span type="button" class="btn btn-default btn-file">
                     <!-- Only allow single file upload for now -->
@@ -114,7 +117,9 @@
     </div>
 
     <!-- jQuery  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Google Maps API -->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places"></script>
     <!-- Smooth Scroll -->
     <script>
         $(function() {
@@ -136,6 +141,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <!-- Custom Scripts -->
     <script src="js/app.min.js"></script>
+    <!-- Map Selector -->
+    <script>
+        $('#locationselector').locationpicker();
+    </script>
 </body>
 
 </html>
