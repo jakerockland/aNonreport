@@ -72,7 +72,7 @@ a:focus, a:hover {
 }
 
 /* Upload Button */
-.btn-file, .dropdown-toggle {
+.btn-file, .dropdown-toggle, .form-control {
     position: relative;
     overflow: hidden;
     font-size: 18px; //change this to your desired size
@@ -100,13 +100,19 @@ a:focus, a:hover {
 }
 
 /* Map Selector */
-#locationselector {
-    width: 250px; 
+#location {
+    width: 250px;
     height: 200px;
 }
+#location-address {
+    width: 240px;
+}
 @media (min-width: 40em) {
-    #locationselector {
+    #location {
         width: 500px;
         height: 400px;
+    }
+    #location-address {
+        width: 480px;
     }
 }
