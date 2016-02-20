@@ -36,6 +36,10 @@ contract AnonReport {
     up=uploads[index];
     d = up.FileLocation;
   }
+  function getUpCount() constant returns(uint256 num) {
+    return uploads.length;
+  }
+
   function newUpload(bytes32 _Hash, string _Location, uint16 _Date, bytes32 _FileLocation) returns(uint256 uploadID){
     uploadID = uploads.length;
     Upload u = uploads[uploadID];
