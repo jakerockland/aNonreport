@@ -71,8 +71,14 @@ a:focus, a:hover {
     outline: 0;
 }
 
-/* Upload Button */
-.btn-file, .dropdown-toggle, .form-control {
+/* Buttons */
+.btn-primary {
+    background-color: #3399cc;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #006294;
+}
+.btn-submit, .btn-file, .dropdown-toggle, .form-control {
     position: relative;
     overflow: hidden;
     font-size: 18px; //change this to your desired size
@@ -98,6 +104,14 @@ a:focus, a:hover {
     display: block;
     padding: 18px 28px;
 }
+.btn-submit {
+    min-width: 240px;
+}
+@media (min-width: 40em) {
+    .btn-submit {
+        min-width: 480px;
+    }
+}
 
 /* Map Selector */
 #location {
@@ -115,4 +129,9 @@ a:focus, a:hover {
     #location-address {
         width: 480px;
     }
+}
+
+/* Date/Time Fields */
+#date, #time {
+    width: 200px;
 }
