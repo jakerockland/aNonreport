@@ -1,3 +1,5 @@
+var encryptedPacked;
+
 $(document).on('change', '.btn-file :file', function(e) {
   var input = e.target;
 
@@ -37,7 +39,7 @@ $(document).on('change', '.btn-file :file', function(e) {
       //   console.log('Encrypted Session Key:\n' + encryptedSessionKey);
 
       // create data packet
-      var packet = encrypted + ',' + encryptedSessionKey;
+      encryptedPacked = encrypted + ',' + encryptedSessionKey;
 
       // decrypted session key
       //   var decryptedSessionKey = cryptico.decrypt(encryptedSessionKey, cryptico.generateRSAKey('UnitedNations', 1024)).plaintext;
