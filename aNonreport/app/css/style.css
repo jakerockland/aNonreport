@@ -135,3 +135,9 @@ a:focus, a:hover {
 #date, #time {
     width: 200px;
 }
+
+/* Footer Style */
+footer {
+    text-align: center;
+    background-color: #fff;
+}
