@@ -1,0 +1,15 @@
+/* Colour Palette
+white: #fcfcfc
+light-blue: #3399cc
+dark-blue: #000099
+grey: #999999
+black: #0b0b0b
+*/
+
+/* Basic styles */
+h1 {
+    color: #000099;
+}
+h2, h3, h4, h5 {
+    color: #999999;
+}
