@@ -18,6 +18,7 @@ h2, h3, h4, h5 {
 }
 body {
   padding-top: 50px;
+  background-color: #fcfcfc;
 }
 .contents {
   padding: 40px 15px;
@@ -25,11 +26,34 @@ body {
 }
 
 /* Navbar */
+.navbar {
+    background-color: #ffffff;
+}
+.navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-brand {
+    color: #000099;
+    font-size: 14px;
+    font-weight: bold;
+}
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    color: #3399cc;
+    background-color: transparent;
+}
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin: auto;
+}
 .navbar-brand {
     float: left;
+    height: 50px;
+    padding: 12px 12px;
+    font-size: 18px;
+    line-height: 30px;
 }
 #navbar {
     float: right;
+}
+.navbar-toggle {
+    background-color: #999999;
+    color: #0b0b0b;
 }
 
 /* Upload Button */
