@@ -1,7 +1,7 @@
 /* Colour Palette
 white: #fcfcfc
 light-blue: #3399cc
-dark-blue: #000099
+dark-blue: #006294
 grey: #999999
 black: #0b0b0b
 */
@@ -9,6 +9,7 @@ black: #0b0b0b
 /* Basics */
 * {
     font-family: 'Lato', sans-serif;
+    font-size: 105%;
 }
 h1 {
     color: #3399cc;
@@ -21,8 +22,17 @@ body {
   background-color: #fcfcfc;
 }
 .contents {
-  padding: 40px 15px;
-  text-align: center;
+  padding: 40px 15px 20px;
+}
+.center {
+    text-align: center;
+}
+a {
+    color: #006294;
+}
+a:focus, a:hover {
+    color: #3399cc;
+    text-decoration: none;
 }
 
 /* Navbar */
@@ -56,10 +66,27 @@ body {
     color: #0b0b0b;
 }
 
-/* Upload Button */
-.btn-file {
+/* Splash Block */
+#splash a {
+    outline: 0;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #3399cc;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #006294;
+}
+.btn-submit, .btn-file, .dropdown-toggle, .form-control {
     position: relative;
     overflow: hidden;
+    font-size: 18px; //change this to your desired size
+    line-height: normal;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    margin: 8px 8px 16px;
 }
 .btn-file input[type=file] {
     position: absolute;
@@ -75,4 +102,42 @@ body {
     background: white;
     cursor: inherit;
     display: block;
+    padding: 18px 28px;
+}
+.btn-submit {
+    min-width: 240px;
+}
+@media (min-width: 40em) {
+    .btn-submit {
+        min-width: 480px;
+    }
+}
+
+/* Map Selector */
+#location {
+    width: 250px;
+    height: 200px;
+}
+#location-address {
+    width: 240px;
+}
+@media (min-width: 40em) {
+    #location {
+        width: 500px;
+        height: 400px;
+    }
+    #location-address {
+        width: 480px;
+    }
+}
+
+/* Date/Time Fields */
+#date, #time {
+    width: 200px;
+}
+
+/* Footer Style */
+footer {
+    text-align: center;
+    background-color: #fff;
 }
