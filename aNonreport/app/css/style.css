@@ -1,7 +1,7 @@
 /* Colour Palette
 white: #fcfcfc
 light-blue: #3399cc
-dark-blue: #000099
+dark-blue: #006294
 grey: #999999
 black: #0b0b0b
 */
@@ -28,7 +28,7 @@ body {
     text-align: center;
 }
 a {
-    color: #000099;
+    color: #006294;
 }
 a:focus, a:hover {
     color: #3399cc;
