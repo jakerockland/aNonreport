@@ -98,8 +98,8 @@ module.exports = (grunt) ->
           "dist/dapp/index.html"      : "<%= files.html.src %>"
       img:
         files:
-          "generated/dapp/img/logo.png"      : "<%= files.img.src %>"
-          "dist/dapp/img/logo.png"      : "<%= files.img.src %>"
+          "generated/dapp/"      : "<%= files.img.src %>"
+          "dist/dapp/"      : "<%= files.img.src %>"
       css:
         files:
           "dist/dapp/css/app.min.css" : "<%= files.css.src %>"
