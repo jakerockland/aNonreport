@@ -88,6 +88,12 @@
     <div class="container" id="report">
         <div class="contents">
             <h1>Report</h1>
+            <h3>Upload evidence regarding report submission.</h3>
+            <span type="button" class="btn btn-default btn-file">
+                <!-- Only allow single file upload for now -->
+                Upload Evidence <input type="file">
+            </span>
+
             <h3>Select your reason(s) for submitting a report.</h3>
             <div class="checkbox">
                 <label>
@@ -134,11 +140,6 @@
             <label class="control-label">Location:</label><input type="text" class="form-control" id="location-address" placeholder="Enter a location" autocomplete="on">
             <div id="location"></div>
 
-            <h3>Upload file for report submission.</h3>
-            <span type="button" class="btn btn-default btn-file">
-                    <!-- Only allow single file upload for now -->
-                    Upload File <input type="file">
-                </span>
         </div>
     </div>
 
@@ -171,15 +172,16 @@
     <script>
         $('#location').locationpicker({
             location: {
-                latitude: 46.15242437752303,
-                longitude: 2.7470703125
+                latitude: 0.00,
+                longitude: 0.00
             },
             radius: 0,
             inputBinding: {
                 latitudeInput: $('#location-lat'),
                 longitudeInput: $('#location-lon'),
                 locationNameInput: $('#location-address')
-            }
+            },
+            enableAutocomplete: true
         });
     </script>
 </body>
