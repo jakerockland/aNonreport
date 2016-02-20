@@ -39,7 +39,7 @@
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="#report">Report</a></li>
-                    <li><a href="/login">Login</a></li>
+                    <li><a href="/ledger">Ledger</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -172,7 +172,7 @@
                 <label class="control-label">Time:</label><input type="time" class="form-control" id="time" placeholder="HH:MM AM"> -->
 
                 <br>
-                <button class="btn btn-default btn-submit btn-primary" type="submit" id="submit">Submit</button>
+                <button class="btn btn-default btn-upload btn-primary" type="button" id="upload" onclick="uploadData()">Report</button>
 
             </form>
         </div>
@@ -188,7 +188,7 @@
     <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <!-- Google Maps API -->
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places"></script>
     <!-- Smooth Scroll -->
     <script>
         $(function() {
