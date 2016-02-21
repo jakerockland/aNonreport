@@ -219,11 +219,13 @@
             },
             radius: 0,
             inputBinding: {
-                latitudeInput: $('#location-lat'),
-                longitudeInput: $('#location-lon'),
                 locationNameInput: $('#location-address')
             },
-            enableAutocomplete: true
+            enableAutocomplete: true,
+            onchanged: function(currentLocation, radius, isMarkerDropped) {
+                $('#location').data('latitude', currentLocation.latitude);
+                $('#location').data('longitude', currentLocation.longitude);
+            }
         });
     </script>
 </body>

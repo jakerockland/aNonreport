@@ -12,22 +12,24 @@ var decrypt = function(encryptedPacket, passphrase) {
   console.log('Decrypted Session Key:\n' + decryptedSessionKey);
 
   // decrypt file with decrypted session key
-  var decryptedData = CryptoJS.AES.decrypt(encryptedData, decryptedSessionKey);
-  console.log('Decrypted Data:\n' + decryptedData.toString(CryptoJS.enc.Latin1));
+  var decryptedData = CryptoJS.AES.decrypt(encryptedData, decryptedSessionKey).toString(CryptoJS.enc.Latin1);
+  console.log('Decrypted Data:\n' + decryptedData);
 
   return decryptedData;
 };
 
 var uploadData = function() {
 
-  var encryptedPacket = $('#encryptedPacket').data();
+  var encryptedPacket = $('#report').data('encryptedPacket');
 
   if (encryptedPacket) {
     var decryptedData = decrypt(encryptedPacket, 'UnitedNations');
     console.log(decryptedData);
+    console.log(encryptedPacket);
     console.log(Date.now());
-    console.log($('#location-lat').data());
-    console.log($('#location-lon').data());
+    console.log($('#location').data('latitude'));
+    console.log($('#location').data('longitude'));
+    console.log("tags");
   } else {
     alert('No file uploaded for reporting!');
   }

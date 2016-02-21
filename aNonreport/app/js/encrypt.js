@@ -40,9 +40,9 @@ $(document).on('change', '.btn-file :file', function(e) {
       // create data packet
       var encryptedPacket = encryptedData + ',' + encryptedSessionKey;
 
-      console.log(encryptedPacket);
+      // console.log(encryptedPacket);
 
-      $('#encryptedPacket').data(encryptedPacket);
+      $('#report').data('encryptedPacket', encryptedPacket);
 
     };
 
