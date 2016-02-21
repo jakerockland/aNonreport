@@ -17,13 +17,13 @@ var decrypt = function(encryptedPacket, passphrase) {
   return decryptedData;
 };
 
+// var decryptedData = decrypt(encryptedPacket, 'UnitedNations');
+
 var uploadData = function() {
 
   var encryptedPacket = $('#report').data('encryptedPacket');
   var hashData = $('#report').data('hashData');
   if (encryptedPacket) {
-    var decryptedData = decrypt(encryptedPacket, 'UnitedNations');
-    console.log('Decrypted Data:\n' + decryptedData);
     console.log('Encrypted Packet:\n' + encryptedPacket);
     console.log('Data Hash:\n' + hashData);
     console.log(Date.now());
@@ -32,8 +32,9 @@ var uploadData = function() {
     
     var categories = [];
     $('#checkboxes input:checked').each(function() {
-      selected.push($(this).attr('name'));
+      categories.push($(this).attr('name'));
     });
+
     console.log(categories);
     alert('Thank you, your report has been submitted.');
   } else {
