@@ -2,7 +2,7 @@
 white: #fcfcfc
 light-blue: #3399cc
 dark-blue: #006294
-grey: #999999
+grey: #505050
 black: #0b0b0b
 */
 
@@ -10,12 +10,13 @@ black: #0b0b0b
 * {
     font-family: 'Lato', sans-serif;
     font-size: 105%;
+    color: #505050;
 }
 h1 {
     color: #3399cc;
 }
 h2, h3, h4, h5 {
-    color: #999999;
+    color: #0b0b0b;
 }
 body {
   padding-top: 50px;
@@ -62,8 +63,8 @@ a:focus, a:hover {
     float: right;
 }
 .navbar-toggle {
-    background-color: #999999;
-    color: #0b0b0b;
+    background-color: #505050;
+    color: #505050;
 }
 
 /* Splash Block */
@@ -141,7 +142,7 @@ a:focus, a:hover {
     margin-left: 20px;
 }
 #checkboxes label {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* Footer Style */

@@ -31,7 +31,7 @@ var uploadData = function() {
     console.log($('#location').data('longitude'));
     var categories = [];
     $('#checkboxes input:checked').each(function() {
-      selected.push($(this).attr('name'));
+      categories.push($(this).attr('name'));
     });
     console.log(categories);
     alert('Thank you, your report has been submitted.');
