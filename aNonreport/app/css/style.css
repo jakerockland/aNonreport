@@ -45,7 +45,7 @@ a:focus, a:hover {
     font-weight: bold;
 }
 .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
-    color: #3399cc;
+    color: #006294;
     background-color: transparent;
 }
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {

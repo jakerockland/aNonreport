@@ -30,6 +30,11 @@ module.exports = (grunt) ->
         ]
         flatten: true
 
+      ico:
+        src: [
+            "app/favicon.ico"
+        ]
+
       coffee:
         dest: "generated/dapp/compiled-coffee"
         compiled: [
@@ -79,6 +84,10 @@ module.exports = (grunt) ->
         files: ["<%= files.img.src %>"]
         tasks: ["copy"]
 
+      ico:
+        files: ["<%= files.ico.src %>"]
+        tasks: ["copy"]
+
       coffee:
         files: ["coffee/**/*.coffee"]
         tasks: ["coffee", "concat"]
@@ -100,6 +109,10 @@ module.exports = (grunt) ->
         files:
           "generated/dapp/"      : "<%= files.img.src %>"
           "dist/dapp/"      : "<%= files.img.src %>"
+      ico:
+        files:
+          "generated/dapp/favicon.ico"      : "<%= files.ico.src %>"
+          "dist/dapp/favicon.ico"      : "<%= files.ico.src %>"
       css:
         files:
           "dist/dapp/css/app.min.css" : "<%= files.css.src %>"
