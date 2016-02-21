@@ -46,10 +46,11 @@ var decrypt = function(encryptedPacket, passphrase) {
 var uploadData = function () {
 
   var encryptedPacket = $('#report').data('encryptedPacket');
-
+  var hashData = $('#report').data('hashData');
   if (encryptedPacket) {
     var decryptedData = decrypt(encryptedPacket, 'UnitedNations');
     console.log(decryptedData);
+    console.log(hashData);
     console.log(encryptedPacket);
     console.log(Date.now());
     console.log($('#location').data('latitude'));
