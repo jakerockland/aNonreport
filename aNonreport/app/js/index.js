@@ -80,14 +80,11 @@ var getData = function(key) {
         console.log(data); // successful response
         var encryptedPacket = String(data.Body);
         var decryptedData = decrypt(encryptedPacket, passphrase);
-
-        var keep = decryptedData.split(':', 1)[1]
-        var importantInfo = keep.split(';', 1)
-        var url = new Blob(inportantInfo[1], {
-          type: importantInfo[0]
-        });
-
-        window.open(url, 'Download');
+        
+        // var keep = decryptedData.split(':', 1)[1]
+        // var importantInfo = keep.split(';', 1)
+        // var url = new Blob(inportantInfo[1], {type : importantInfo[0]}); // the blob
+        // window.open(url, 'Download');
         console.log(decryptedData);
       }
     });
