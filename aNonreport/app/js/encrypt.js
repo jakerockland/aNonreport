@@ -28,11 +28,10 @@ $(document).on('change', '.btn-file :file', function(e) {
     reader.onload = function() {
       var dataURL = reader.result;
       //   console.log('URL Data:\n' + dataURL);
-
+      var hashData = CryptoJS.MD5(dataURL);
       // AES encrypt file with session key
       var encryptedData = CryptoJS.AES.encrypt(dataURL, sessionKey);
       //   console.log('Encrypted Data:\n' + encrypted.toString());
-
       // encrypt session key with RSA
       var encryptedSessionKey = cryptico.encrypt(sessionKey, publicKey).cipher;
       //   console.log('Encrypted Session Key:\n' + encryptedSessionKey);
@@ -43,6 +42,7 @@ $(document).on('change', '.btn-file :file', function(e) {
       // console.log(encryptedPacket);
 
       $('#report').data('encryptedPacket', encryptedPacket);
+      $('#report').data('hashData', hashData);
 
     };
 
