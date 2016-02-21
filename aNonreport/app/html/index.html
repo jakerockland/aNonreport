@@ -182,7 +182,10 @@
 
     <div class="container" id="ledger" ng-app="Ledger" ng-controller="LedgerCtrl">
         <div class="contents">
-            <h1>Report Ledger</h1>
+            <h1>aNonreport Ledger</h1>
+            <ul id="snippets" ng-repeat="x in snippets">
+              <li class="snippet" id="{{ x.Key.split('/')[1] }}" onclick="getData(this.id)">{{ x.Key.split('/')[1] }}</li>
+            </ul>
         </div>
 
     </div>

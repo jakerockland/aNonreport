@@ -63,3 +63,62 @@ var uploadData = function() {
     alert('No file uploaded for reporting!');
   }
 };
+
+var getData = function(key) {
+  var passphrase = prompt('Please enter your decrypting passphrase to decrypt aNonnote #' + key);
+  if (passphrase === null) {
+    return null;
+  } else {
+    var params = {
+      Bucket: 'a-non-report',
+      Key: 'data/' + key,
+    };
+    s3.getObject(params, function(err, data) {
+      if (err) {
+        console.log(err, err.stack); // an error occurred
+      } else {
+        console.log(data); // successful response
+        var encryptedPacket = String(data.Body);
+        var decryptedData = decrypt(encryptedPacket, passphrase);
+        console.log(decryptedData);
+      }
+    });
+  }
+};
+
+// var getLedger = function(key) {
+//   // console.log(key);
+//   var params = {
+//     Bucket: 'a-non-report',
+//     Key: 'ledger/' + key,
+//   };
+//   s3.getObject(params, function(err, data) {
+//     if (err) console.log(err, err.stack); // an error occurred
+//     else console.log(data); // successful response
+//   });
+// };
+
+var app = angular.module('Ledger', []);
+app.controller('LedgerCtrl', function($scope, $interval) {
+
+  var updateLedger = function() {
+    var params = {
+      Bucket: 'a-non-report',
+      MaxKeys: 11,
+      Prefix: 'ledger/',
+    };
+
+    s3.listObjects(params, function(err, data) {
+      if (err) {
+        console.log(err, err.stack); // an error occurred
+      } else {
+        // console.log(data); // successful response
+        $scope.snippets = data.Contents;
+        $scope.snippets.shift();
+      }
+    });
+  };
+  updateLedger();
+  $interval(updateLedger, 10000);
+
+});
