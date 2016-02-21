@@ -136,6 +136,14 @@ a:focus, a:hover {
     width: 200px;
 }
 
+/* Checkboxes */
+#checkboxes {
+    margin-left: 20px;
+}
+#checkboxes label {
+    font-weight: 300;
+}
+
 /* Footer Style */
 footer {
     text-align: center;

@@ -121,49 +121,29 @@
                 </span>
 
                 <h3>Select your reason(s) for submitting a report.</h3>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Murder / Killing</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Physical Abuse / Injury</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Torture</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Slavery / Forced Labor</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Sexual Violence / Rape</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Restricting Freedom of Expression</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Violation of Right to Asylum</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Witness to Corruption</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Property Right Violation</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Wrongful Imprisonment</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Other</label>
+                <div id="checkboxes">
+                    <label class="checkbox">
+                        <input type="checkbox" name="murder-killing">Murder / Killing</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="abuse-injury">Physical Abuse / Injury</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="torture">Torture</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="slavery-forcedlabor">Slavery / Forced Labor</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="sexualviolence-rape">Sexual Violence / Rape</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="free-expression">Restricting Freedom of Expression</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="asylum-violation">Violation of Right to Asylum</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="corruption">Witness to Corruption</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="property-violation">Property Right Violation</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="wrongful-imprisionment">Wrongful Imprisonment</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="other">Other</label>
                 </div>
 
                 <h3>Location where this report takes place.</h3>
@@ -218,6 +198,8 @@
     <script src="js/app.min.js"></script>
     <!-- Map Selector -->
     <script>
+        $('#location').data('latitude', 41.3833);
+        $('#location').data('longitude', 2.1833);
         $('#location').locationpicker({
             location: {
                 latitude: 41.3833,
