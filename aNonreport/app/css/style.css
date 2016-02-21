@@ -89,6 +89,16 @@ a:focus, a:hover {
     border-radius: 8px;
     margin: 8px 8px 16px;
 }
+.btn-file{
+  margin: 8px 0px 0px;
+}
+
+.filename {
+  font-size: 18px;
+  height: 39px;
+  width: 65% !important;
+  margin: 8px 0px 0px;
+}
 .btn-file input[type=file] {
     position: absolute;
     top: 0;

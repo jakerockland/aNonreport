@@ -7,6 +7,7 @@ $(document).on('change', '.btn-file :file', function(e) {
   for (var i = 0; i < files.length; i++) {
     file = files[i];
     var label = file.name;
+    document.getElementById('filename').value = file.name;
     // console.log('File Name:\n' + label);
     // console.log('File Data:\n' + file);
 
