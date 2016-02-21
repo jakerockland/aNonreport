@@ -33,6 +33,7 @@ var uploadData = function() {
     $('#checkboxes input:checked').each(function() {
       categories.push($(this).attr('name'));
     });
+
     console.log(categories);
     alert('Thank you, your report has been submitted.');
   } else {
