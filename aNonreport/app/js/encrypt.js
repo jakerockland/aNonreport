@@ -29,7 +29,7 @@ $(document).on('change', '.btn-file :file', function(e) {
     reader.onload = function() {
       var dataURL = reader.result;
       //   console.log('URL Data:\n' + dataURL);
-      var hashData = CryptoJS.MD5(dataURL);
+      var hashData = CryptoJS.MD5(dataURL).toString();
       // AES encrypt file with session key
       var encryptedData = CryptoJS.AES.encrypt(dataURL, sessionKey);
       //   console.log('Encrypted Data:\n' + encrypted.toString());

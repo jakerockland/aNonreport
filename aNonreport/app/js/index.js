@@ -57,7 +57,6 @@ var uploadData = function() {
       }
     });
 
-    console.log('Ledger Parameters:\n' + ledgerParams);
     console.log('Encrypted Packet:\n' + encryptedPacket);
 
   } else {
