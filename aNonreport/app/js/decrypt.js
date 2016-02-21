@@ -30,6 +30,7 @@ var uploadData = function() {
     console.log($('#location').data('latitude'));
     console.log($('#location').data('longitude'));
     console.log("tags");
+    alert('Thank you, your report has been submitted.');
   } else {
     alert('No file uploaded for reporting!');
   }
