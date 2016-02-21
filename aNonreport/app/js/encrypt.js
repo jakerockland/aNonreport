@@ -1,5 +1,3 @@
-var encryptedPacket;
-
 $(document).on('change', '.btn-file :file', function(e) {
   var input = e.target;
 
@@ -19,7 +17,8 @@ $(document).on('change', '.btn-file :file', function(e) {
     // console.log('Session Key:\n' + sessionKey);
 
     // rsa encryption block
-    // var rsaKey = cryptico.generateRSAKey('UnitedNations', 1024);
+    var passphrase = 'UnitedNations';
+    // var rsaKey = cryptico.generateRSAKey(passphrase, 1024);
     // var publicKey = cryptico.publicKeyString(rsaKey);
     var publicKey = 'tnWx5IiQsPzB3GvcqJDKKMz1pEOP9ERHmC9xU0ZQvMTK/csKZA+IV/WWMObKALaH7k0+Os0ZZH262PHInFZ2f0kqKTA/++yanoqUv+Y+NCstP3TRsQiv41PrRsVMXE8hoIq1WZFiIiV4W5eodrqbMIwzSr0ufezKmKYP8wCHYB8=';
     // console.log('Public RSA Key:\n' + publicKey);
@@ -31,7 +30,7 @@ $(document).on('change', '.btn-file :file', function(e) {
       //   console.log('URL Data:\n' + dataURL);
 
       // AES encrypt file with session key
-      var encrypted = CryptoJS.AES.encrypt(dataURL, sessionKey);
+      var encryptedData = CryptoJS.AES.encrypt(dataURL, sessionKey);
       //   console.log('Encrypted Data:\n' + encrypted.toString());
 
       // encrypt session key with RSA
@@ -39,16 +38,12 @@ $(document).on('change', '.btn-file :file', function(e) {
       //   console.log('Encrypted Session Key:\n' + encryptedSessionKey);
 
       // create data packet
-      encryptedPacket = encrypted + ',' + encryptedSessionKey;
+      var encryptedPacket = encryptedData + ',' + encryptedSessionKey;
 
-      // decrypted session key
-      //   var decryptedSessionKey = cryptico.decrypt(encryptedSessionKey, cryptico.generateRSAKey('UnitedNations', 1024)).plaintext;
-      // console.log('Decrypted Session Key:\n' + decryptedSessionKey);
+      // console.log(encryptedPacket);
 
-      // decrypt file with decrypted session key
-      //   var decrypted = CryptoJS.AES.decrypt(encrypted, decryptedSessionKey);
-      //   console.log('Decrypted Data:\n' + decrypted.toString(CryptoJS.enc.Latin1));
-      return encryptedPacket;
+      $('#report').data('encryptedPacket', encryptedPacket);
+
     };
 
     reader.readAsDataURL(file);
