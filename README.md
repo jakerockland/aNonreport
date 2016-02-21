@@ -1,9 +1,9 @@
 # aNonreport
-A distributed Blockchain-supported human rights violation reporting system.
+## A distributed Blockchain-supported human rights violation reporting system.
 
-Developed initially as a HackUPC 2016 Project. 
+## Developed initially as a HackUPC 2016 Project. 
 
-Inspiration
+### Inspiration
 
 Technologists and human rights advocates are often kept isolated from each other, speaking languages not easily understood by those inhabiting the other camp. Merging innovative technologies to facilitate advocacy for human rights seems imperative, yet is seldom practiced.
 
@@ -11,13 +11,13 @@ aNonreport is the result of conversations between several programmers, Jack Rock
 
 Disseminating information about human rights violations is easier than ever, but tracking and acting upon the vast quantities of data available has become increasingly difficult. Simultaneously, people who do report violations risk persecution. Existing anonymous solutions, such as SecureDrop, are centralized, relying on servers that are both expensive to implement and vulnerable to attack. Further, these reporting systems leave information ultimately in the hands of a single organization. New programming platforms allow for decentralized reporting techniques that could empower both witnesses and reporting organizations that have traditionally depended on in-house, expensive solutions to receive information from the field.
 
-What it does
+### What it does
 
 aNonreport is an online platform that enables users to file reports anonymously, including video & images, that can be geo-tagged and immediately sent to one or more monitoring organizations. It uses the latest in decentralized, anonymous communication technologies based on the same secure blockchain technology that bitcoin uses. By eliminating centralized servers and relying on multiple layers of encryption, users are assured of their anonymity, while receiving organizations are able to use a real-time updating system that is immune to traditional hacking exploits.
 
 aNonreport will have numerous applications, from election-day monitoring in domestic contexts to reporting attacks on civilians during , and even providing a whistle blowing platform for existing organizations. A scalable solution, the platform will eventually be able to enable one user’s report to be sent to multiple organizations simultaneously, while ensuring a complete digital chain of custody that can be verified for investigative purposes.
 
-Possible applications include use by:
+### Possible applications include use by:
 
 - Existing organizations that already have individuals in the field monitoring human rights violations:
   - Instantly reporting attacks during wartime, such as barrel-bombs or chemical weapons in Syria by trained human rights monitors   
@@ -31,7 +31,7 @@ Possible applications include use by:
   
 - Coalitions of organizations that want to collaborate to share information about violations in a given region 
 
-How is aNonreport different than existing solutions like SecureDrop or Ushahidi?
+### How is aNonreport different than existing solutions like SecureDrop or Ushahidi?
 
 aNonreport is different from any current reporting solution because it takes advantage of a completely decentralized, yet verifiable distribution network through IPFS and Ethereum. In plain English: 
 
@@ -40,6 +40,6 @@ aNonreport is different from any current reporting solution because it takes adv
 
 Both users and organizations have to properly implemented security protocol to protect their ends of the system, but aNonreport is designed to assure completely transparent, open-source, end-to-end security. 
 
-How we built it
+### How we built it
 
 aNonreport is built on Ethereum, a decentralized platform that runs applications that can circumvent any possibility of censorship or interference from third parties. The specific contracts are programmed in Ethereum and are then run through the back-end in JS. Encryption of files is handled through concurrent PGP via a Keybase implementation. The file uploads will eventually be handled through IPFS, a distributed hosting service that puts small portions of encrypted files on different computers. This ensures a file network without any centralized server and anonymity. though a later switch to another, faster distributed hosting solution such as MaidSafe will be iterated.
