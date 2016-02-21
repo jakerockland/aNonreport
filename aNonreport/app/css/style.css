@@ -96,8 +96,14 @@ a:focus, a:hover {
 .filename {
   font-size: 18px;
   height: 39px;
-  width: 65% !important;
+  width: 130px !important;
   margin: 8px 0px 0px;
+}
+@media (min-width: 40em) {
+    .filename {
+        width: 320px !important;
+    }
+
 }
 .btn-file input[type=file] {
     position: absolute;
