@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>aNonreport | Main</title>
+    <title>aNonreport</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -39,7 +42,7 @@
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="#report">Report</a></li>
-                    <li><a href="/ledger">Ledger</a></li>
+                    <li><a href="#ledger">Ledger</a></li>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -118,49 +121,29 @@
                 </span>
 
                 <h3>Select your reason(s) for submitting a report.</h3>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Murder / Killing</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Physical Abuse / Injury</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Torture</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Slavery / Forced Labor</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Sexual Violence / Rape</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Restricting Freedom of Expression</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Violation of Right to Asylum</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Witness to Corruption</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Property Right Violation</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Wrongful Imprisonment</label>
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox" name="report-type">Other</label>
+                <div id="checkboxes">
+                    <label class="checkbox">
+                        <input type="checkbox" name="murder-killing">Murder / Killing</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="abuse-injury">Physical Abuse / Injury</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="torture">Torture</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="slavery-forcedlabor">Slavery / Forced Labor</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="sexualviolence-rape">Sexual Violence / Rape</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="free-expression">Restricting Freedom of Expression</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="asylum-violation">Violation of Right to Asylum</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="corruption">Witness to Corruption</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="property-violation">Property Right Violation</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="wrongful-imprisionment">Wrongful Imprisonment</label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="other">Other</label>
                 </div>
 
                 <h3>Location where this report takes place.</h3>
@@ -183,8 +166,11 @@
     <footer>
         <p>&copy 2016 aNonreport</p>
         <p>aNonreport is a <a href="https://hackupc.com/" target="_blank">HackUPC</a> project, licensed under the <a href="http://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU General Public License 3.0</a>.</p>
+        <p><a class="github-button" href="https://github.com/jakerockland/aNonreport" data-icon="octicon-star" data-count-href="/jakerockland/aNonreport/stargazers" data-count-api="/repos/jakerockland/aNonreport#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star jakerockland/aNonreport on GitHub">Star</a>&nbsp;<a class="github-button" href="https://github.com/jakerockland/aNonreport/fork" data-icon="octicon-repo-forked" data-count-href="/jakerockland/aNonreport/network" data-count-api="/repos/jakerockland/aNonreport#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork jakerockland/aNonreport on GitHub">Fork</a></p>
     </footer>
 
+    <!-- Github Buttons -->
+    <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
     <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <!-- Google Maps API -->
@@ -212,10 +198,12 @@
     <script src="js/app.min.js"></script>
     <!-- Map Selector -->
     <script>
+        $('#location').data('latitude', 41.3833);
+        $('#location').data('longitude', 2.1833);
         $('#location').locationpicker({
             location: {
-                latitude: 0.00,
-                longitude: 0.00
+                latitude: 41.3833,
+                longitude: 2.1833
             },
             radius: 0,
             inputBinding: {

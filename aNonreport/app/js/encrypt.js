@@ -17,7 +17,7 @@ $(document).on('change', '.btn-file :file', function(e) {
     // console.log('Session Key:\n' + sessionKey);
 
     // rsa encryption block
-    var passphrase = 'UnitedNations';
+    // var passphrase = 'UnitedNations';
     // var rsaKey = cryptico.generateRSAKey(passphrase, 1024);
     // var publicKey = cryptico.publicKeyString(rsaKey);
     var publicKey = 'tnWx5IiQsPzB3GvcqJDKKMz1pEOP9ERHmC9xU0ZQvMTK/csKZA+IV/WWMObKALaH7k0+Os0ZZH262PHInFZ2f0kqKTA/++yanoqUv+Y+NCstP3TRsQiv41PrRsVMXE8hoIq1WZFiIiV4W5eodrqbMIwzSr0ufezKmKYP8wCHYB8=';
