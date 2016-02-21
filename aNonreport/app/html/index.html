@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +10,9 @@
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- Add Custom Font, Lato -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap Styles -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -128,20 +130,15 @@
             <h1>File a Report</h1>
             <form>
                 <h3>Upload evidence regarding report submission.</h3>
-                <span />
-                <div class="col-lg-6">
-                    <div class="input-group">
-                        <span class="input-group-btn">
-                            <span type="button" class="btn btn-default btn-file">
-                                <!-- Only allow single file upload for now -->
-                                Upload Evidence <input type="file">
-                            </span>
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <span type="button" class="btn btn-default btn-file">
+                            <!-- Only allow single file upload for now -->
+                            Upload Evidence <input type="file">
                         </span>
-                        <input type="text" class="form-control filename" id="filename" readonly="readonly">
-                    </div>
-                    <!-- /input-group -->
+                    </span>
+                    <input type="text" class="form-control filename" id="filename" readonly="readonly">
                 </div>
-                <!-- /.col-lg-6 -->
                 <h3>Select your reason(s) for submitting a report.</h3>
                 <div id="checkboxes">
                     <label class="checkbox">
@@ -168,7 +165,7 @@
                         <input type="checkbox" name="other">Other</label>
                 </div>
 
-                <h3>Location where this report takes place.</h3>
+                <h3>Location where this report took place.</h3>
                 <input type="text" class="form-control" id="location-address" placeholder="Enter a location" autocomplete="on">
                 <div id="location"></div>
 
@@ -181,6 +178,16 @@
 
             </form>
         </div>
+    </div>
+
+    <div class="container" id="ledger" ng-app="Ledger" ng-controller="LedgerCtrl">
+        <div class="contents">
+            <h1>aNonreport Ledger</h1>
+            <ul id="snippets" ng-repeat="x in snippets">
+              <li class="snippet" id="{{ x.Key.split('/')[1] }}" onclick="getData(this.id)">{{ x.Key.split('/')[1] }}</li>
+            </ul>
+        </div>
+
     </div>
 
     <hr>
@@ -197,6 +204,10 @@
     <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
     <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- AngularJS -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- AWS -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.37.min.js"></script>
     <!-- Google Maps API -->
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=places"></script>
     <!-- Smooth Scroll -->
@@ -240,7 +251,6 @@
             }
         });
     </script>
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.37.min.js"></script>
 </body>
 
 </html>
