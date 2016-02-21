@@ -29,6 +29,7 @@ var uploadData = function() {
     console.log(Date.now());
     console.log($('#location').data('latitude'));
     console.log($('#location').data('longitude'));
+    
     var categories = [];
     $('#checkboxes input:checked').each(function() {
       selected.push($(this).attr('name'));

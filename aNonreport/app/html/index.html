@@ -115,11 +115,19 @@
             <h1>File a Report</h1>
             <form>
                 <h3>Upload evidence regarding report submission.</h3>
-                <span type="button" class="btn btn-default btn-file">
-                    <!-- Only allow single file upload for now -->
-                    Upload Evidence <input type="file">
-                </span>
-
+                <span />
+                <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <span type="button" class="btn btn-default btn-file">
+            <!-- Only allow single file upload for now -->
+            Upload Evidence <input type="file">
+        </span>
+      </span>
+      <input type="text" class="form-control filename" id="filename" readonly="readonly">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+<br /><br />
                 <h3>Select your reason(s) for submitting a report.</h3>
                 <div id="checkboxes">
                     <label class="checkbox">
@@ -147,7 +155,7 @@
                 </div>
 
                 <h3>Location where this report takes place.</h3>
-                <label class="control-label">Location:</label><input type="text" class="form-control" id="location-address" placeholder="Enter a location" autocomplete="on">
+                <input type="text" class="form-control" id="location-address" placeholder="Enter a location" autocomplete="on">
                 <div id="location"></div>
 
                 <!-- <h3>Date and time of related incident.</h3>
@@ -216,6 +224,7 @@
             }
         });
     </script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.37.min.js"></script>
 </body>
 
 </html>
